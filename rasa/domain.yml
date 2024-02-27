@@ -1,0 +1,66 @@
+version: "3.1"
+
+intents:
+- location
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- get_title:
+    use_entities: true
+
+slots:
+  resource_topic:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: resource_topic
+
+forms: {}
+
+entities:
+- resource_topic
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you? Do you need anything else?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_location:
+  - text: "26/C, Hosur Rd, Electronics City Phase 1, Electronic City, Bengaluru, Karnataka 560100"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_what:
+  - text: "What else do you need?"
+
+  utter_show_images:
+  - text: "https://skalebot-product-catalog.s3.ap-south-1.amazonaws.com/10/36979"
+
+actions:
+- action_product
+- action_show_images
+
+config:
+  store_entities_as_slots: true
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

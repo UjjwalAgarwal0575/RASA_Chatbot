@@ -1,0 +1,2 @@
+How to pass title as argument to our custom actions.
+Have to describe title as entities.

@@ -1,0 +1,67 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_what
+  - intent: affirm
+  - action: utter_happy
+
+# - story: show bangle images
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: Bangle
+#   - action: utter_show_images
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: action_product
+
+
+# - story: Ask for product recommendation in a specific category
+#   # stories.yml
+
+#   steps:
+#   - intent: get_title
+#     entities:
+#     - resource_type: "product"
+#     - resource_topic: "Necklace"
+#   - action: action_show_images
+
+- story: Ask for product recommendation in another category
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: get_title 
+  - action: action_show_images
+
+- story: Output location
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: location
+  - action: utter_location
+  
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye

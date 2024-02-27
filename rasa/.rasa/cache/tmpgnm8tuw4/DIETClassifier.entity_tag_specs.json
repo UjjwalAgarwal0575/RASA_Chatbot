@@ -1,0 +1,20 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-resource_topic",
+      "2": "I-resource_topic",
+      "3": "L-resource_topic",
+      "4": "U-resource_topic",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-resource_topic": 1,
+      "I-resource_topic": 2,
+      "L-resource_topic": 3,
+      "U-resource_topic": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  }
+]

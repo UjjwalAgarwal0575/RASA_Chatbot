@@ -1,0 +1,6 @@
+sudo /usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/jdbc.conf
+
+sudo mysql --local-infile=1 -u root -p
+
+https://www.elastic.co/guide/en/cloud/current/ec-getting-started-search-use-cases-db-logstash.html#ec-db-logstash-pipeline
+https://www.youtube.com/watch?v=PcSNVTBhe0w
